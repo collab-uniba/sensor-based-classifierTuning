@@ -1,0 +1,11 @@
+stopped,1544802419, start_emotions_elicitation
+started,1544803156, end emotion_elicitation
+stopped,1544803172, start_baseline
+started,1544803292, end_baseline
+Interruptions
+stopped,1544803986, (first interruption)
+stopped,1544804446, (second interruption)
+stopped,1544804959, (third interruption)
+stopped,1544805286, (fourth interruption)
+stopped,1544805713, (fifth interruption)
+stopped,1544806346, (six interruption)
