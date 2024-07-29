@@ -1,0 +1,8 @@
+J48:RWeka
+C5.0:C50
+nb:klaR
+knn
+mlp:RSNNS
+JRip:RWeka
+svmLinear:kernlab
+rf:randomForest
