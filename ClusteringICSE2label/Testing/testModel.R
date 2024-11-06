@@ -7,16 +7,16 @@ library(mlbench)
 library(randomForest)
 library(doMC)
 library(class)
-# load dataset
+
 input_file <- args[1]
 print(input_file)
-testing <- read.csv(input_file, header = TRUE, sep=",")
+testing <- read.csv(input_file, header = TRUE, sep = ",")
 
 l<-ncol(testing)
 label <- testing[,l]
 
 
-excluded_predictors <- c("id", "valence") #"Neu_vs_NonNeu_predictions"
+excluded_predictors <- c("id", "valence")
 testing <- testing[ , !(names(testing) %in% excluded_predictors)]
 
 print(testing[1:5,])
@@ -34,8 +34,8 @@ final_predictions <- predict(super_model, testing)
 output_file <- args[4]
 
 
-if(!exists("scalar_metrics", mode="function")) 
-  source(paste(getwd(), "lib/scalar_metrics.R", sep="/"))
+if(!exists("scalar_metrics", mode = "function"))
+  source(paste(getwd(), "lib/scalar_metrics.R", sep = "/"))
 scalar_metrics(predictions=final_predictions, truth=label, outdir= "ModelResults", output_file)
 
 final_predictions <- data.frame(final_predictions)

@@ -3,7 +3,6 @@
 # read and trim params
 
 models_file=$(echo $1 | xargs)
-
 signal=$(echo $2 | xargs)
 label=$(echo $3| xargs)
 

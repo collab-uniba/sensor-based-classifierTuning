@@ -1,5 +1,5 @@
 source("libraries.R")
-source("./Preprocessing/IntervalExtraction.R")
+source("./IntervalExtraction.R")
 
 
 # Get values function
@@ -71,7 +71,7 @@ for (s in 1:length(dirs_icse)){
   for (i in 1: length(signals)){
     print(paste("Analyzing signal: ", signals[i]))
     baseline_values <- getSignalValues(signals[i], files[i], timestamp_baseline, baseline_seconds) #takes the last 30 seconds of baseline
-  
+
 
   features_baseline <- extractFeatures_baseline(signals[i], baseline_values)
   n_features_baseline <- length(features_baseline) + 3
